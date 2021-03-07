@@ -11,7 +11,7 @@ let miningMachList = {
 let now_make = 0;
 let now_coin = 0;
 
-let powr = 100;
+let power = 100;
 let efficiency = 1;
 
 // 채굴기 클래스 선언
@@ -23,13 +23,13 @@ class MiningMachine {
     this.type = type;
     this.name = name;
     this.index = index;
+    power -= type;
   }
-  work = this.type + 1;
   doWork(params) {
-    return this.work;
+    return  this.type;
   }
   getWork() {
-    return this.work;
+    return  this.type;
   }
 }
 // 효율계산
@@ -48,8 +48,9 @@ function getTotalWorkNumber() {
 }
 
 function rtx1_buy() {
-  miningMachList.rtx1.push(new MiningMachine(0, 'rtx1'));
+  miningMachList.rtx1.push(new MiningMachine(1, 'rtx1'));
   document.getElementById('rtx1_now').innerHTML = miningMachList.rtx1.length;
+  document.getElementById('electricity_output').innerHTML = power;
   // rtx1_now = rtx1_now + 1;
   // now_make = now_make + (rtx1_make * efficiency);
   // document.getElementById('rtx1_now').innerHTML = rtx1_now;
@@ -58,8 +59,9 @@ function rtx1_buy() {
 }
 
 function rtx2_buy() {
-  miningMachList.rtx2.push(new MiningMachine(1, 'rtx2'));
+  miningMachList.rtx2.push(new MiningMachine(2, 'rtx2'));
   document.getElementById('rtx1_now').innerHTML = miningMachList.rtx2.length;
+  document.getElementById('electricity_output').innerHTML = power;
   // rtx2_now = rtx2_now + 1;
   // now_make = now_make + (rtx2_make * efficiency);
   // document.getElementById('rtx2_now').innerHTML = rtx2_now;
