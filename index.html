@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="menu">
+                <div class="menu_under menu_1">
+                    남은전력&nbsp;<span id="electricity_output">100</span>
+                    비트코인&nbsp;<span id="output">560</span>개
+                </div>
+                <div class="menu_under menu_2">
+                    채굴기 구매<br>
+                    <div id="rtx1_buy" onclick="rtx1_buy();">
+                        <img src="images/rtx1.png">
+                    </div>
+                    <div id="rtx2_buy" onclick="rtx2_buy();">
+                        <img src="images/rtx2.png">
+                    </div>
+                </div>
+                <div class="menu_under menu_3">
+                    menu3
+                </div>
+            </div>
+            <div class="main">
+                채굴기 현황<br><br>
+                <div>
+                    RTX1<br>
+                    효율 : 1BTC/s<br>
+                    개수 : <span id="rtx1_now">0</span>
+                    <br><br>
+                </div>
+                <div>
+                    RTX2<br>
+                    효율 : 2BTC/s<br>
+                    개수 : <span id="rtx2_now">0</span>
+                    <br><br>
+                </div>
+                <div>
+                    현재 효율 : 초당 <span id="now_make"></span>코인
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
