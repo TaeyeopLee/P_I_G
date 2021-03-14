@@ -8,6 +8,7 @@
         <div class="container">
             <div class="menu">
                 <div class="menu_under menu_1">
+                    <div><span id="today"></span></div>
                     <div>남은전력&nbsp;<span id="electricity_output">100</span></div>
                     <div>비트코인&nbsp;<span id="output">560</span>개</div>
                 </div>
@@ -25,7 +26,8 @@
                 </div>
             </div>
             <div class="main">
-                채굴기 현황<br><br>
+                <div>채굴기 현황</div>
+                <br>
                 <div>
                     RTX1<br>
                     효율 : 1BTC/s<br>
@@ -41,9 +43,12 @@
                 <div>
                     현재 효율 : 초당 <span id="now_make"></span>코인
                 </div>
+                <div>
+                    현재 비트코인 가격 : <span id="btc_price"></span>&nbsp;$
+                </div>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="app.js"></script>
     </body>
 </html>
