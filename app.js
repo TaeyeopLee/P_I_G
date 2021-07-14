@@ -21,12 +21,12 @@ let btc_price = 0;
 //     return;
 //   }
 //   // let eff = mach.consume_power;
-//   // let efficiency = 
+//   // let efficiency =
 // }
 
 // 채굴기 클래스 선언
 class MiningMachine {
-  name = ''; // 채굴기 이름
+  name = ""; // 채굴기 이름
   type = 0; // 채굴기 타입
   index;
   constructor(type, name, index) {
@@ -45,28 +45,27 @@ class MiningMachine {
 
 function getTotalWorkNumber() {
   let total = 0;
-  miningMachList.rtx1.forEach(mach => total += mach.getWork());
-  miningMachList.rtx2.forEach(mach => total += mach.getWork());
+  miningMachList.rtx1.forEach((mach) => (total += mach.getWork()));
+  miningMachList.rtx2.forEach((mach) => (total += mach.getWork()));
   return total;
 }
 
 function rtx1_buy() {
-  miningMachList.rtx1.push(new MiningMachine(1, 'rtx1'));
-  document.getElementById('rtx1_now').innerHTML = miningMachList.rtx1.length;
-  document.getElementById('electricity_output').innerHTML = power;
-  document.getElementById('now_make').innerHTML = getTotalWorkNumber();
+  miningMachList.rtx1.push(new MiningMachine(1, "rtx1"));
+  document.getElementById("rtx1_now").innerHTML = miningMachList.rtx1.length;
+  document.getElementById("electricity_output").innerHTML = power;
+  document.getElementById("now_make").innerHTML = getTotalWorkNumber();
   // rtx1_now = rtx1_now + 1;
   // now_make = now_make + (rtx1_make * efficiency);
   // document.getElementById('rtx1_now').innerHTML = rtx1_now;
   // document.getElementById('now_make').innerHTML = now_make;
-
 }
 
 function rtx2_buy() {
-  miningMachList.rtx2.push(new MiningMachine(2, 'rtx2'));
-  document.getElementById('rtx2_now').innerHTML = miningMachList.rtx2.length;
-  document.getElementById('electricity_output').innerHTML = power;
-  document.getElementById('now_make').innerHTML = getTotalWorkNumber();
+  miningMachList.rtx2.push(new MiningMachine(2, "rtx2"));
+  document.getElementById("rtx2_now").innerHTML = miningMachList.rtx2.length;
+  document.getElementById("electricity_output").innerHTML = power;
+  document.getElementById("now_make").innerHTML = getTotalWorkNumber();
   // rtx2_now = rtx2_now + 1;
   // now_make = now_make + (rtx2_make * efficiency);
   // document.getElementById('rtx2_now').innerHTML = rtx2_now;
@@ -82,7 +81,8 @@ $(document).ready(function () {
   let $today = $("#today");
   function setDateTime() {
     let now = new Date();
-    let date = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate();
+    let date =
+      now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate();
     let time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
     $today.text(date + " " + time);
     setTimeout(() => {
@@ -97,8 +97,8 @@ $(document).ready(function () {
 
   function addCount() {
     // now_coin = now_coin + now_make;
-    miningMachList.rtx1.forEach(mach => now_coin += mach.doWork());
-    miningMachList.rtx2.forEach(mach => now_coin += mach.doWork());
+    miningMachList.rtx1.forEach((mach) => (now_coin += mach.doWork()));
+    miningMachList.rtx2.forEach((mach) => (now_coin += mach.doWork()));
     $output.text(now_coin);
   }
 
@@ -111,6 +111,4 @@ $(document).ready(function () {
   dispBTC_price();
   setInterval(addCount, 1000);
   setInterval(dispBTC_price, 1000);
-
-
-})
+});
