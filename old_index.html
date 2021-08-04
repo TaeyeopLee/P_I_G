@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/64e6ccc944.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="menu">
+      <div class="menu_under menu_1">
+        <div><span id="today"></span></div>
+        <!--<div>⚡&nbsp;<span id="electricity_output">100</span>&#47;100</div>-->
+        <!--전력-->
+        <!--<div>💲&nbsp;<span id="output">560</span>개</div>-->
+        <!--현재 소지중인 비트코인-->
+        <div><i class="fas fa-bolt"></i>&nbsp;<span id="electricity_output">100</span></div>
+        <!--전력-->
+        <div><i class="fab fa-bitcoin"></i>&nbsp;<span id="output">560</span>개</div>
+        <!--현재 소지중인 비트코인-->
+
+
+      </div>
+      <div class="menu_under menu_2">
+        채굴기 구매<br>
+        <div id="rtx1_buy" onclick="rtx1_buy();">
+          <img src="images/rtx1.png">
+        </div>
+        <div id="rtx2_buy" onclick="rtx2_buy();">
+          <img src="images/rtx2.png">
+        </div>
+      </div>
+      <div class="menu_under menu_3">
+        menu3
+      </div>
+    </div>
+    <div class="main">
+      <div>채굴기 현황</div>
+      <br>
+      <div>
+        RTX1<br>
+        효율 : 1BTC/s<br>
+        개수 : <span id="rtx1_now">0</span>
+        <br><br>
+      </div>
+      <div>
+        RTX2<br>
+        효율 : 2BTC/s<br>
+        개수 : <span id="rtx2_now">0</span>
+        <br><br>
+      </div>
+      <div>
+        현재 효율 : 초당 <span id="now_make"></span>코인
+      </div>
+      <div>
+        현재 비트코인 가격 : <span id="btc_price"></span>&nbsp;$
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body><!-- 수정되나?222 -->
+
+</html>

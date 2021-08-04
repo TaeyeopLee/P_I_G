@@ -15,5 +15,18 @@
   "bugs": {
     "url": "https://github.com/TaeyeopLee/P_I_G/issues"
   },
-  "homepage": "https://github.com/TaeyeopLee/P_I_G#readme"
+  "homepage": "https://github.com/TaeyeopLee/P_I_G#readme",
+  "dependencies": {
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.3.5",
+    "webpack-dev-server": "^3.11.2"
+  }
 }
